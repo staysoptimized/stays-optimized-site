@@ -1,0 +1,569 @@
+<?php /* Stays Optimized Homepage Template */ ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary SEO ────────────────────────── -->
+  <title>Stays Optimized LLC — STR Optimization, Tools & Management</title>
+  <meta name="description" content="Stays Optimized LLC is the short-term rental optimization specialist. Two purpose-built tools (PropertyIQ.report + HappyHosts.shop), hands-on consulting, and a flagship property we run ourselves. Get your free 7-Point Listing Audit." />
+  <link rel="canonical" href="https://staysoptimized.com/" />
+
+  <!-- ── Open Graph ────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Stays Optimized" />
+  <meta property="og:title" content="Stays Optimized LLC — STR Optimization, Tools & Management" />
+  <meta property="og:description" content="Two purpose-built tools + one operator who runs a flagship property. Turn your short-term rental into reliable cash flow." />
+  <meta property="og:url" content="https://staysoptimized.com/" />
+  <meta property="og:image" content="https://staysoptimized.com/stays-optimized-og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stays Optimized LLC — STR Optimization, Tools & Management" />
+  <meta name="twitter:description" content="Two purpose-built tools + one operator who runs a flagship property. Turn your short-term rental into reliable cash flow." />
+
+  <!-- ── Fonts ─────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="<?php echo plugin_dir_url(__FILE__); ?>styles.css" />
+
+  <!-- ── JSON-LD Schema ────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://staysoptimized.com/#organization",
+        "name": "Stays Optimized LLC",
+        "url": "https://staysoptimized.com",
+        "logo": "https://staysoptimized.com/stays-optimized-logo.png",
+        "description": "Short-term rental optimization, consulting, and management company with two purpose-built host tools.",
+        "sameAs": [
+          "https://propertyiq.report",
+          "https://happyhosts.shop",
+          "https://www.instagram.com/staysoptimized",
+          "https://www.facebook.com/groups/happyhosts"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://staysoptimized.com/#website",
+        "url": "https://staysoptimized.com",
+        "name": "Stays Optimized",
+        "publisher": { "@id": "https://staysoptimized.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://staysoptimized.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "STR Listing Optimization",
+        "provider": { "@id": "https://staysoptimized.com/#organization" },
+        "description": "Full short-term rental listing audit, rewrite, and pricing strategy.",
+        "url": "https://staysoptimized.com/services.html#listing"
+      },
+      {
+        "@type": "Service",
+        "name": "STR Revenue Management",
+        "provider": { "@id": "https://staysoptimized.com/#organization" },
+        "description": "Dynamic pricing, comp monitoring, and monthly revenue optimization.",
+        "url": "https://staysoptimized.com/services.html#revenue"
+      },
+      {
+        "@type": "Service",
+        "name": "Full STR Property Management",
+        "provider": { "@id": "https://staysoptimized.com/#organization" },
+        "description": "End-to-end short-term rental management including guest comms, cleaning, and maintenance.",
+        "url": "https://staysoptimized.com/services.html#management"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ══════════════ ANNOUNCEMENT BAR ══════════════ -->
+  <div class="announcement-bar">
+    New here? <a href="/services/#contact">Grab the free 7-Point Listing Audit →</a>
+  </div>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header class="site-header" id="header">
+    <div class="container">
+      <div class="header-inner">
+
+        <a href="index.html" class="logo" aria-label="Stays Optimized Home">
+          <!-- Place your stays-optimized-logo.png file in this same folder -->
+          <img src="stays-optimized-logo.png" alt="Stays Optimized LLC"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+               style="height:44px; width:auto;" />
+          <span class="logo-fallback" style="display:none;">
+            <span class="logo-mark">SO</span>
+            <span>Stays <span style="color:var(--gold);">Optimized</span></span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="#tools">Tools</a>
+          <a href="#services">Services</a>
+          <a href="#founder">About</a>
+          <a href="/services/">Get Started</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer"
+             class="btn btn--outline-white btn--sm">propertyIQ.report ↗</a>
+          <a href="/services/#contact" class="btn btn--primary btn--sm">Free Audit</a>
+        </div>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6"  x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+      <a href="#tools">Tools</a>
+      <a href="#services">Services</a>
+      <a href="#founder">About</a>
+      <a href="/services/">Pricing</a>
+      <div class="nav-cta">
+        <a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer"
+           class="btn btn--outline-white">propertyIQ.report ↗</a>
+        <a href="/services/#contact" class="btn btn--primary">Get Free Audit</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: Copy -->
+        <div class="hero-content">
+          <div class="hero-tag fade-in">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+            STR Optimization Specialist
+          </div>
+          <h1 class="fade-in d1">
+            Turn your short-term rental into
+            <em>reliable cash flow.</em>
+          </h1>
+          <p class="hero-sub fade-in d2">
+            Stays Optimized LLC is the STR property optimization specialist — two purpose-built tools, one operator who runs the property to prove it works.
+          </p>
+          <div class="hero-actions fade-in d3">
+            <a href="/services/#contact" class="btn btn--primary btn--lg">
+              Get the Free 7-Point Listing Audit
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h7M9 8l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+          <p class="hero-text-cta fade-in d4">
+            See the flagship property we run:&nbsp;
+            <a href="https://retreathouseny.com" target="_blank" rel="noopener noreferrer">Retreat House NY →</a>
+          </p>
+        </div>
+
+        <!-- Right: mini preview cards -->
+        <div class="hero-panel fade-in d2" aria-label="Our tools">
+          <div class="hero-panel-label">Our Two Optimization Tools</div>
+
+          <div class="mini-card">
+            <div class="mini-card-icon">📊</div>
+            <div>
+              <div class="mini-card-title">PropertyIQ.report</div>
+              <div class="mini-card-desc">Listing intelligence, market benchmarks, and a prioritized action plan with revenue impact estimates.</div>
+              <a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer" class="mini-card-link">
+                Run My Listing →
+              </a>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-card-icon">🛍️</div>
+            <div>
+              <div class="mini-card-title">HappyHosts.shop</div>
+              <div class="mini-card-desc">The host optimization toolkit — ebooks, templates, AI prompts, and host-happy products you can use today.</div>
+              <a href="https://happyhosts.shop" target="_blank" rel="noopener noreferrer" class="mini-card-link">
+                Browse the Shop →
+              </a>
+            </div>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-card-icon">🏡</div>
+            <div>
+              <div class="mini-card-title">Retreat House NY</div>
+              <div class="mini-card-desc">The flagship. Stay with us — or watch how we run it.</div>
+              <a href="https://retreathouseny.com" target="_blank" rel="noopener noreferrer" class="mini-card-link">
+                Book Retreat House →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ TRUST STRIP ══════════════ -->
+  <div class="trust-strip" aria-label="Trust signals">
+    <div class="container">
+      <div class="trust-inner">
+        <div class="trust-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Built by an operator
+        </div>
+        <div class="trust-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          500+ hosts in the Happy Hosts community
+        </div>
+        <div class="trust-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Trusted by direct-booking hosts in NY, FL, TX &amp; beyond
+        </div>
+        <div class="trust-item">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Every tool tested on a real flagship property first
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ DIFFERENTIATOR ══════════════ -->
+  <section class="section section--dark" id="who-its-for" aria-label="Who this is for">
+    <div class="container">
+      <div class="differentiator-grid">
+
+        <div class="diff-copy">
+          <span class="eyebrow">Who This Is For</span>
+          <h2>Built for hosts who run their rental like a <em class="text-gold">business</em> — not a vacation home that sits.</h2>
+          <p style="color:rgba(255,255,255,.65); font-size:1rem; line-height:1.8; margin-bottom:0;">
+            If you check your occupancy rate. If you wonder why the listing down the street earns more than yours. If you're done making decisions by gut feeling and ready to make them with data — you're exactly who we built this for.
+          </p>
+          <p style="color:rgba(255,255,255,.5); font-size:.88rem; line-height:1.7; margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,255,255,.08);">
+            Stays Optimized is not for hobbyist hosts who list their place "whenever." It's for owners who want their property running like an asset — with the strategy, data, and execution to prove it.
+          </p>
+        </div>
+
+        <div class="diff-checklist" aria-label="Is this you?">
+          <div class="diff-checklist-label">Is this you?</div>
+          <ul>
+            <li>
+              <span class="diff-check" aria-hidden="true">✓</span>
+              <span>You measure success in <strong>revenue</strong>, not just reviews</span>
+            </li>
+            <li>
+              <span class="diff-check" aria-hidden="true">✓</span>
+              <span>You want to know your <strong>RevPAR, ADR, and occupancy</strong> — not just "it seems to book well"</span>
+            </li>
+            <li>
+              <span class="diff-check" aria-hidden="true">✓</span>
+              <span>You've already tried to optimize and it <strong>didn't move the needle</strong> the way you expected</span>
+            </li>
+            <li>
+              <span class="diff-check" aria-hidden="true">✓</span>
+              <span>You treat your property as an <strong>asset that should work harder</strong> every single month</span>
+            </li>
+            <li>
+              <span class="diff-check" aria-hidden="true">✓</span>
+              <span>You're done leaving <strong>20–40% of potential revenue</strong> on the table because that's what most hosts do</span>
+            </li>
+            <li>
+              <span class="diff-check" aria-hidden="true">✓</span>
+              <span>You want a <strong>specialist</strong>, not another generic course or DIY checklist</span>
+            </li>
+          </ul>
+          <a href="/services/#contact" class="btn btn--primary" style="margin-top:28px;">
+            Yes — Let's Talk
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h7M9 8l4 4-4 4"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ WHY STAYS OPTIMIZED ══════════════ -->
+  <section class="section" id="problem" aria-label="Why Stays Optimized">
+    <div class="container">
+      <div class="problem-grid">
+
+        <div class="problem-copy">
+          <span class="eyebrow">The Optimization Gap</span>
+          <h2>Most hosts have already tried to fix their listing. The data says it didn't work.</h2>
+          <p>You've probably tweaked your photos, rewritten your description, adjusted your pricing. Maybe more than once. And if your revenue still hasn't moved the way you expected — you're not alone. The problem isn't effort. <strong>It's that most hosts are optimizing the wrong things.</strong></p>
+          <p>Every change you make without data is a guess. And guesses are expensive — not just in time, but in the bookings you never see, the nights that go empty, and the revenue that quietly flows to the listing down the street. Professional optimization isn't an added cost. It's the difference between a listing that earns and one that just exists.</p>
+          <p>PropertyIQ.report tells you exactly what to fix — scored against real top performers in your market. HappyHosts.shop gives you the right tools to fix it correctly. And when you want it done right the first time, that's what Stays Optimized is for.</p>
+
+          <!-- Tool callout pills -->
+          <div class="tool-pills" aria-label="Our tools">
+            <a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer" class="tool-pill">
+              <span class="tool-pill-icon">📊</span>
+              <span>
+                <strong>PropertyIQ.report</strong>
+                <em>Stop guessing. Know exactly what to fix.</em>
+              </span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h7M9 8l4 4-4 4"/>
+              </svg>
+            </a>
+            <a href="https://happyhosts.shop" target="_blank" rel="noopener noreferrer" class="tool-pill">
+              <span class="tool-pill-icon">🛍️</span>
+              <span>
+                <strong>HappyHosts.shop</strong>
+                <em>Fix it right the first time.</em>
+              </span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                   stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h7M9 8l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+
+          <a href="/services/#contact" class="btn btn--primary" style="margin-top:8px;">Get Your Free 7-Point Audit</a>
+        </div>
+
+        <div class="stat-tiles" aria-label="Industry statistics">
+          <div class="stat-tile">
+            <div class="stat-tile-num">20–40%</div>
+            <div class="stat-tile-label">Revenue left behind by hosts who optimize without data</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-tile-num">73%</div>
+            <div class="stat-tile-label">Of "already optimized" listings still have a critical title or photo problem</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-tile-num">2×</div>
+            <div class="stat-tile-label">Average revenue improvement when professional optimization replaces DIY guesswork</div>
+          </div>
+          <div class="stat-tile">
+            <div class="stat-tile-num">30 days</div>
+            <div class="stat-tile-label">To measurable results — when you fix the right things first</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ THE TWO TOOLS ══════════════ -->
+  <section class="section section--warm" id="tools" aria-label="Our optimization tools">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Two Purpose-Built Tools</span>
+        <h2>Stop guessing. Start optimizing with data.</h2>
+        <p class="lead">We built these tools because gut-feel optimization costs hosts thousands of dollars a year. One shows you exactly what's wrong. The other gives you everything you need to fix it — correctly, the first time.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- PropertyIQ -->
+        <div class="card card--light">
+          <div class="card-eyebrow">Tool 01 · propertyiq.report</div>
+          <h3>Listing intelligence that tells you exactly what's costing you bookings.</h3>
+          <p>PropertyIQ.report benchmarks your listing against the top performers in your market and hands you a prioritized action plan — with estimated revenue impact for every fix. No guesswork. No fluff.</p>
+          <a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            Run My Listing
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- HappyHosts -->
+        <div class="card card--light">
+          <div class="card-eyebrow">Tool 02 · happyhosts.shop</div>
+          <h3>The host optimization toolkit. Fix it with the right kit.</h3>
+          <p>Got your action plan from PropertyIQ? Now come here to execute. Ebooks, templates, AI prompt packs, and curated host-happy products — hand-picked by an operator who runs a flagship property herself.</p>
+          <a href="https://happyhosts.shop" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            Browse the Shop
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Retreat House — dark flagship card -->
+        <div class="card card--dark">
+          <div class="card-ribbon" aria-label="Flagship property">Flagship</div>
+          <div class="card-eyebrow">Retreat House NY</div>
+          <h3>The proof. Stay with us — or study how we run it.</h3>
+          <p>Retreat House NY is a thoughtfully designed short-term rental operated by Stays Optimized LLC. Every tool we sell, every framework we teach — we run on this property first.</p>
+          <a href="https://retreathouseny.com" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            Book Retreat House →
+          </a>
+        </div>
+
+        <!-- Coaching -->
+        <div class="card card--light" id="services">
+          <div class="card-eyebrow">Consulting & Done-For-You</div>
+          <h3>Want it done for you? We optimize your listings end-to-end.</h3>
+          <p>From a single strategy session to full listing management — we work hands-on with hosts who want expert execution, not just another ebook. Book a call and let's map your property's revenue potential.</p>
+          <a href="/services/" class="btn btn--outline-gold">
+            Book a Strategy Call →
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOUNDER STRIP ══════════════ -->
+  <section class="section" id="founder" aria-label="Founder">
+    <div class="container">
+      <div class="founder-strip">
+        <div class="founder-avatar" aria-hidden="true">A</div>
+        <div class="founder-content">
+          <span class="eyebrow" style="display:block; margin-bottom:12px;">From the Founder</span>
+          <blockquote>
+            "I founded Stays Optimized LLC and built Retreat House NY. PropertyIQ.report and HappyHosts.shop are the two tools I wished I'd had when I started — one tells me what to fix, the other helps me fix it. Every tool is one I use on my own property first."
+          </blockquote>
+          <div class="founder-attribution">
+            <strong>Founder, Stays Optimized LLC</strong> · Operator of Retreat House NY
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER CTA BAND ══════════════ -->
+  <section class="footer-cta" aria-label="Final call to action">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--navy-mid);">Start Here</span>
+      <h2>Don't know where to start?</h2>
+      <p>Get the free 7-Point Listing Audit and we'll meet you where you are.</p>
+      <div class="footer-cta-actions">
+        <a href="/services/#contact" class="btn btn--dark btn--lg">
+          Get the Free 7-Point Listing Audit
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h7M9 8l4 4-4 4"/>
+          </svg>
+        </a>
+        <a href="/services/" class="btn btn--outline-dark btn--lg"
+           style="background:transparent; color:var(--navy-dark); border:2px solid var(--navy-dark);">
+          View Services &amp; Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Stays Optimized Home">
+            <img src="stays-optimized-logo.png" alt="Stays Optimized LLC"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 style="height:38px; width:auto;" />
+            <span class="logo-fallback" style="display:none;">
+              <span class="logo-mark">SO</span>
+              <span>Stays <span style="color:var(--gold);">Optimized</span></span>
+            </span>
+          </a>
+          <p>STR optimization specialist. Two purpose-built tools, one flagship property, and hands-on consulting for hosts who treat hosting like a business.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer">PropertyIQ.report ↗</a></li>
+            <li><a href="https://happyhosts.shop" target="_blank" rel="noopener noreferrer">HappyHosts.shop ↗</a></li>
+            <li><a href="https://retreathouseny.com" target="_blank" rel="noopener noreferrer">Retreat House NY ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/#listing">Listing Optimization</a></li>
+            <li><a href="/services/#revenue">Revenue Management</a></li>
+            <li><a href="/services/#management">Full Management</a></li>
+            <li><a href="/services/#consulting">Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="https://www.facebook.com/groups/happyhosts" target="_blank" rel="noopener noreferrer">Happy Hosts FB Group ↗</a></li>
+            <li><a href="https://www.instagram.com/staysoptimized" target="_blank" rel="noopener noreferrer">@staysoptimized ↗</a></li>
+            <li><a href="/services/#contact">Free 7-Point Audit</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Stays Optimized LLC. All rights reserved.</span>
+        <span>
+          Part of the
+          <a href="https://propertyiq.report" target="_blank" rel="noopener noreferrer">propertyIQ</a>
+          &amp;
+          <a href="https://happyhosts.shop" target="_blank" rel="noopener noreferrer">HappyHosts</a>
+          ecosystem
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════ SCRIPTS ══════════════ -->
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('mobileToggle');
+    const menu   = document.getElementById('mobileMenu');
+    toggle.addEventListener('click', () => {
+      const open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Scroll fade-in — only hide elements that are genuinely below the fold
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('anim-visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.card, .stat-tile, .mini-card').forEach(el => {
+        el.classList.add('anim-ready');
+        obs.observe(el);
+      });
+    }
+  </script>
+</body>
+</html>
