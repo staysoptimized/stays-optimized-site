@@ -959,6 +959,17 @@ p  { line-height: 1.75; }
 .d3 { animation-delay: .3s; }
 .d4 { animation-delay: .4s; }
 
+/* Scroll-reveal — elements stay visible if JS doesn't run */
+.anim-ready {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.anim-ready.anim-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── Responsive ─────────────────────────────── */
 @media (max-width: 1024px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
