@@ -464,6 +464,60 @@ p  { line-height: 1.75; }
 }
 .stat-tile-label { font-size: .8rem; color: var(--text-light); line-height: 1.4; }
 
+/* ── Tool Pills ─────────────────────────────── */
+.tool-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 28px 0 24px;
+}
+.tool-pill {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--warm-white);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  transition: var(--t);
+  text-decoration: none;
+}
+.tool-pill:hover {
+  border-color: var(--gold);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
+}
+.tool-pill-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  width: 36px;
+  text-align: center;
+}
+.tool-pill span:not(.tool-pill-icon) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tool-pill strong {
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--navy-dark);
+  font-family: 'Playfair Display', serif;
+}
+.tool-pill em {
+  font-style: normal;
+  font-size: .78rem;
+  color: var(--text-light);
+}
+.tool-pill svg {
+  color: var(--gold-dark);
+  flex-shrink: 0;
+  transition: var(--t);
+}
+.tool-pill:hover svg { transform: translateX(3px); }
+
 /* ── Cards Grid ─────────────────────────────── */
 .cards-grid {
   display: grid;
