@@ -20,4 +20,6 @@ https://mail.google.com/mail/?authuser=staysoptimized@gmail.com#all/thread-f:187
 
 Owner statements, owner reports, and invoices are not included.
 
-Not copied: the Pompano and Retreat House photo zips and JPGs, the `.skill` files, and the app source files.
+Also in the folder: the Pompano photos (14 JPGs), the Retreat House photos (10 JPGs), the Retreat House Direct Booking and Airbnb photo zips, the PropertyIQ explainer video, and the PropertyIQ skill and migration files.
+
+Not copied: the app source files and the other site video clips, which are site-build assets rather than reports.
